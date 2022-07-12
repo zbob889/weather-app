@@ -1,6 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto';
+}
+
+:root {
+    --light-gray: #424242;
+    --dark-gray: #303030;
 }
 
 #container {
@@ -11,10 +17,11 @@
 }
 
 #header {
-    background-color: gray;
+    background-color: var(--light-gray);
     font-family: 'Oswald';
     font-size: 24px;
     font-weight: 700;
+    color: white;
     display: flex;
     align-items: center;
 }
@@ -24,9 +31,125 @@
 }
 
 #search {
-    background-color: lightgray;
+    background-color: var(--dark-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#search>form {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchBar {
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid white;
+    height: 30%;
+    width: 35vw;
+    min-width: 300px;
+    color: white;
+    font-size: 16px;
+    background-color: var(--dark-gray);
 }
 
 #display {
-    background-color: lightsteelblue;
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#weatherDisplay {
+    display: grid;
+    grid-template: 2fr 2fr 1fr / 1fr;
+    height: 50%;
+    width: 50%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#top {
+    background-color: rgb(100, 4, 100);
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+#location {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-family: 'Oswald';
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+
+#location>svg {
+    fill: white;
+}
+
+#weather {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 24px;
+    color: lightgray;
+}
+
+#middle {
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#temp {
+    font-family: 'Oswald';
+    color: lightgray;
+    font-size: 75px;
+}
+
+#humidity {
+    font-size: 24px;
+    color: white;
+}
+
+#bottom {
+    background-color: var(--light-gray);
+    display: flex;
+    padding-right: 24px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    color: lightgray;
+}
+
+#tempType {
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--dark-gray);
+    color: white;
+    transition: 0.15s;
+}
+
+#tempType:hover {
+    transform: scale(1.04)
 }
