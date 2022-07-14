@@ -6,10 +6,10 @@ export default function createNewDisplay(){
 
     addElement('div', '', 'weatherDisplay', 'display');
 
-    addElement('div', '', 'top', 'weatherDiplay');
+    addElement('div', '', 'top', 'weatherDisplay');
     addElement('div', '', 'location', 'top');
     addElement('p', '', 'locationName', 'location');
-    addElement('div', '', 'svg', 'location');
+    addElement('img', '', 'icon', 'location');
     addElement('div', '', 'weather', 'top');
     addElement('p', '', 'weatherName', 'weather');
 
@@ -19,4 +19,5 @@ export default function createNewDisplay(){
 
     addElement('div', '', 'bottom', 'weatherDisplay');
     addElement('button', '', 'tempType', 'bottom');
+    addText('tempType', 'Switch F/C');
 };
