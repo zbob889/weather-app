@@ -60,6 +60,10 @@
     background-color: var(--dark-gray);
 }
 
+#submit {
+    display: none;
+}
+
 #display {
     background-color: #232323;
     display: flex;
