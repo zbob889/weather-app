@@ -10,19 +10,23 @@ const form = document.getElementById('form');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     let location = document.getElementById('searchBar').value;
-    searchBar.value = '';
-    buildDisplay(location);
+    if(location == ''){
+        return;
+    }else if(location != ''){
+        searchBar.value = '';
+        buildDisplay(location);
 
-    let tempButton = document.getElementById('tempType');
-    tempButton.addEventListener('click', () => {
-        let temp = document.getElementById('temp');
-        if (temp.innerHTML.includes('C') == true) {
-            tempConversion('F');
-            console.log('C to F');
-        } else if (temp.innerHTML.includes('F') == true) {
-            tempConversion('C');
-            console.log('F to C');
-        }
-    });
+        let tempButton = document.getElementById('tempType');
+        tempButton.addEventListener('click', () => {
+            let temp = document.getElementById('temp');
+            if (temp.innerHTML.includes('C') == true) {
+                tempConversion('F');
+                console.log('C to F');
+            } else if (temp.innerHTML.includes('F') == true) {
+                tempConversion('C');
+                console.log('F to C');
+            };
+        });
+    };
 });
 
